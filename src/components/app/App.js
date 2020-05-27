@@ -44,9 +44,11 @@ class App extends Component {
             <ErrorBoundry>
                 <div className="stardb-app">
                     <Header/>
-                    <PersonList>
-                        {({name}) => <span>{name}</span>}
-                    </PersonList>
+
+                    <PersonList />
+                    <PlanetList />
+                    <StarshipList />
+
                     <PersonDetails itemid={11}/>
                 </div>
             </ErrorBoundry>
