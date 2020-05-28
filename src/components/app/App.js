@@ -14,9 +14,9 @@ import {
     StarshipList
 } from "../sw-components/Item-lists";
 
-import PersonDetails from "../sw-components/Person-detaill";
-import PlanetDetails from "../sw-components/Planet-detaill";
-import StarshipDetails from "../sw-components/Starship-detaill";
+import PersonDetails from "../sw-components/Person-details";
+import PlanetDetails from "../sw-components/Planet-details";
+import StarshipDetails from "../sw-components/Starship-details";
 
 import "./app.css";
 
@@ -52,6 +52,7 @@ class App extends React.Component {
                         <StarshipList/>
                         <PersonDetails itemId={11}/>
                         <PlanetDetails itemId={5}/>
+                        <StarshipDetails itemId={10}/>
                     </div>
                 </SwapiServiceProvider>
             </ErrorBoundry>
