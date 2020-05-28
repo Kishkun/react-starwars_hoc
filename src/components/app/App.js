@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 
 import Header from "../header/Header";
 import RandomPlanet from "../random-planet/Random-planet";
@@ -14,15 +14,13 @@ import {
     StarshipList
 } from "../sw-components/Item-lists";
 
-import {
-    PersonDetails,
-    PlanetDetails,
-    StarshipDetails
-} from "../sw-components/Details"
+import PersonDetails from "../sw-components/Person-detaill";
+import PlanetDetails from "../sw-components/Planet-detaill";
+import StarshipDetails from "../sw-components/Starship-detaill";
 
 import "./app.css";
 
-class App extends Component {
+class App extends React.Component {
 
     swapiService = new SwapiService();
 
@@ -52,8 +50,8 @@ class App extends Component {
                         <PersonList/>
                         <PlanetList/>
                         <StarshipList/>
-                        <PersonDetails itemid={11}/>
-                        <PlanetDetails itemid={5}/>
+                        <PersonDetails itemId={11}/>
+                        <PlanetDetails itemId={5}/>
                     </div>
                 </SwapiServiceProvider>
             </ErrorBoundry>

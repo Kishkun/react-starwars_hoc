@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Spinner from '../spinner/Spinner';
 import ErrorIndicator from '../error-indicator/Error-indicator';
 
 const WithData = (View, getData) => {
-  return class extends Component {
+  return class extends React.Component {
 
     state = {
       data: null
