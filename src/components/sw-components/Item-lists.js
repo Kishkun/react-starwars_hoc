@@ -18,11 +18,6 @@ const renderName = ({name}) => {
         <span>{name}</span>
     )
 };
-const renderModelAndName = ({name, model}) => {
-    return (
-        <span>{name} ({model})</span>
-    )
-};
 
 const mapPersonMethodsToProps = (swapiService) => {
     return {
