@@ -22,10 +22,9 @@ import "./app.css";
 
 class App extends React.Component {
 
-    swapiService = new SwapiService();
-
     state = {
-        showRandomPlanet: true
+        showRandomPlanet: true,
+        swapiService: new SwapiService()
     };
 
     toggleRandomPlanet = () => {
@@ -36,7 +35,18 @@ class App extends React.Component {
         });
     };
 
+    onServiceChange = () => {
+        this.setState((state) => {
+            const Service = state.swapiService instanceof SwapiService ?
+                DummySwapiService : SwapiService;
+            return {
+                swapiService: new Service()
+            }
+        })
+    };
+
     render() {
+        const {swapiService} = this.state;
 
         const planet = this.state.showRandomPlanet ?
             <RandomPlanet/> :
@@ -44,9 +54,10 @@ class App extends React.Component {
 
         return (
             <ErrorBoundry>
-                <SwapiServiceProvider value={this.swapiService}>
+                <SwapiServiceProvider value={swapiService}>
                     <div className="stardb-app">
-                        <Header/>
+                        <Header onServiceChange={this.onServiceChange}/>
+                        {planet}
                         <PersonList/>
                         <PlanetList/>
                         <StarshipList/>
