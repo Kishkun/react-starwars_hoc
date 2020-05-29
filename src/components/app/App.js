@@ -38,7 +38,7 @@ class App extends React.Component {
                     <div className="stardb-app">
                         <Header onServiceChange={this.onServiceChange}/>
                         <RandomPlanet />
-                        <PeoplePage/>
+                        <PeoplePage />
                         <PlanetsPage/>
                         <StarshipsPage/>
                     </div>

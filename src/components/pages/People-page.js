@@ -20,7 +20,7 @@ class PeoplePage extends React.Component {
         const {selectedItem} = this.state;
         return (
             <Row
-                left={<PersonList />}
+                left={<PersonList onItemSelected={this.onItemSelected} />}
                 right={<PersonDetails itemId={selectedItem}/>}
             />
         );
