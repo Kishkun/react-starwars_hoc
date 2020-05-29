@@ -37,7 +37,7 @@ class App extends React.Component {
                 <SwapiServiceProvider value={swapiService}>
                     <div className="stardb-app">
                         <Header onServiceChange={this.onServiceChange}/>
-                        <RandomPlanet/>
+                        <RandomPlanet />
                         <PeoplePage/>
                         <PlanetsPage/>
                         <StarshipsPage/>

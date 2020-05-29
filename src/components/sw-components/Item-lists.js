@@ -38,20 +38,20 @@ const mapStarshipsMethodsToProps = (swapiService) => {
 const PersonList = Compose(
     WithSwapiService(mapPersonMethodsToProps),
     WithData,
-    WithChildFunction(renderName)(ItemList)
-);
+    WithChildFunction(renderName)
+)(ItemList);
 
 const PlanetList = Compose(
     WithSwapiService(mapPlanetsMethodsToProps),
     WithData,
-    WithChildFunction(renderName)(ItemList)
-);
+    WithChildFunction(renderName)
+)(ItemList);
 
 const StarshipList = Compose(
     WithSwapiService(mapStarshipsMethodsToProps),
     WithData,
-    WithChildFunction(renderName)(ItemList)
-);
+    WithChildFunction(renderName)
+)(ItemList);
 
 export {
     PersonList,
